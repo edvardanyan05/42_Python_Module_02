@@ -50,6 +50,12 @@ def test_error_types() -> None:
     except Exception as error:
         print(f"Unexpected error: {error}")
 
+    try:
+        print("Testing multiple exception catch...")
+        garden_operations(0)
+    except (ValueError, TypeError) as error:
+        print(f"Caught multiple error types: {error}")
+
     print("All error types tested successfully!")
 
 
